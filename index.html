@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>FitBuddy</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background: #111827;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 420px;
+            padding: 30px;
+            background: #1f2937;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>FitBuddy</h1>
+
+    <p>AI Fitness Plan Generator</p>
+
+    <form action="/generate-workout" method="post">
+
+        <label>Name</label>
+        <input type="text" name="username" required>
+
+        <label>User ID</label>
+        <input type="text" name="user_id" required>
+
+        <label>Age</label>
+        <input type="number" name="age" required>
+
+        <label>Weight (kg)</label>
+        <input type="text" name="weight" required>
+
+        <label>Fitness Goal</label>
+
+        <select name="goal">
+
+            <option value="weight loss">
+                Weight Loss
+            </option>
+
+            <option value="muscle gain">
+                Muscle Gain
+            </option>
+
+            <option value="general wellness">
+                General Wellness
+            </option>
+
+            <option value="flexibility">
+                Flexibility
+            </option>
+
+        </select>
+
+        <label>Workout Intensity</label>
+
+        <select name="intensity">
+
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+
+        </select>
+
+        <button type="submit">
+            Generate Plan
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
